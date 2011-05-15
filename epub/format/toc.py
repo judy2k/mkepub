@@ -8,7 +8,7 @@ NCX files.
 import jinja2
 from lxml import etree
 
-import epub
+import epub.format
 
 __all__ = ['TableOfContents', 'NavPoint']
 
@@ -172,7 +172,7 @@ class NavPoint(object):
         self.label = label
         self.link = link
         self.play_order = -1
-        self.point_id = point_id or epub.random_id()
+        self.point_id = point_id or epub.format.random_id()
         self.cls = cls
         self.nav_points = []
     

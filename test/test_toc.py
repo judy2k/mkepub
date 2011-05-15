@@ -52,12 +52,12 @@ including those conforming to the relaxed constraints of OPS 2.0 -->
 class TableOfContentsTestCase(unittest.TestCase):
     @staticmethod
     def _get_toc():
-        from epub import toc
+        from epub.format import toc
         return toc.TableOfContents
     
     @staticmethod
     def _get_navpoint():
-        from epub import toc
+        from epub.format import toc
         return toc.NavPoint
     
     def test_basic(self):

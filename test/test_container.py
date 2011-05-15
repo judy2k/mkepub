@@ -6,7 +6,7 @@ import tempfile
 from StringIO import StringIO
 import unittest
 
-import epub.container as ec
+import epub.format.container as ec
 
 SAMPLE = """<?xml version="1.0"  encoding="UTF-8"?>
 <container version="1.0"

@@ -10,7 +10,7 @@ epub-compliant OPF files.
 import jinja2
 from lxml import etree
 
-import epub
+import epub.format
 
 __all__ = ['Publication']
 
@@ -91,7 +91,7 @@ class Publication(object):
         Returns a randomly-generated id-string, suitable for use as a
         unique-id for a manifest item.
         """
-        item_id = epub.random_id()
+        item_id = epub.format.random_id()
         # Just ensure id is unique - may save problems in rare occasions:
         while item_id in self.item_ids:
             item_id = epub.random_id()

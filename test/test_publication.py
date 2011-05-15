@@ -26,8 +26,8 @@ SAMPLE_OPF = """<?xml version="1.0"?>
 
 class PublicationTestCase(unittest.TestCase):
     def _get_pub_class(self):
-        import epub.publication
-        return epub.publication.Publication
+        import epub.format.publication
+        return epub.format.publication.Publication
     
     def _get_pub_instance(self, *args, **kwargs):
         return self._get_pub_class()(*args, **kwargs)
