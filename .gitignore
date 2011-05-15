@@ -1,2 +1,4 @@
 .bzr
 .DS_Store
+env
+*.pyc
