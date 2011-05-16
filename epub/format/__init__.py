@@ -4,19 +4,22 @@
 A module for creating epub files (although designed so that it may deal with)
 other formats in the future.
 
-    epub.Epub :: A class for creating OCF-compliant epub files.
-    epub.container.Container :: A simple encapsulation of an epub container.xml
+    epub.format.Epub :: A class for creating OCF-compliant epub files.
+    epub.format.Container :: A simple encapsulation of an epub container.xml
         file, capable of parsing and generating said file format.
-    epub.toc.TableOfContents :: A class for encapsulating toc data, capable of
+    epub.format.TableOfContents :: A class for encapsulating toc data, capable of
         parsing or generating NCX files.
-    epub.publication.Publication :: Encapsulates the manifest and reading-order
+    epub.format.Publication :: Encapsulates the manifest and reading-order
         of a single publication, and can parse and generate OPF files.
 """
 
 import random
 import zipfile
+from epub.format.container import Container
+from epub.format.toc import TableOfContents
+from epub.format.publication import Publication
 
-__all__ = ['Epub']
+__all__ = ['Epub', 'Container', 'TableOfContents', 'Publication']
 
 # The random id-generator picks characters from the following string:
 ID_COMPONENTS = "abcdefghijklmnopqrstuvwxyz"
